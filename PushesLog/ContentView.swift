@@ -41,10 +41,10 @@ struct ContentView: View {
                 }
             }) {
                 Text("\(counter)")
-                    .font(.system(size: 100, weight: .bold, design: .rounded)) // Adjust font size and weight
+                    .font(.system(size: 150, weight: .bold, design: .rounded)) // Adjust font size and weight
                     .foregroundColor(.black)
                     .frame(width: 400, height: 400)
-                    .background(Circle().fill(Color.red))
+                    .background(Circle().fill(Color.gray))
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.bottom, 100)
@@ -55,8 +55,10 @@ struct ContentView: View {
                 ForEach(entries) { entry in
                     HStack {
                         Text("\(entry.value)")
+                            .font(.system(size: 14)) // Adjust font size and weight
                         Spacer()
                         Text(entry.date!, style: .date)
+                            .font(.system(size: 14)) // Adjust font size and weight
                     }
                     .onTapGesture {
                         if isEditing {
@@ -96,6 +98,13 @@ struct ContentView: View {
                     exportEntries()
                 }) {
                     Text("Export")
+                }
+            }
+            ToolbarItem(placement: .bottomBar) {
+                Button(action: {
+                    resetCounter()
+                }) {
+                    Text("Reset")
                 }
             }
         }
@@ -153,6 +162,17 @@ struct ContentView: View {
             }
         } catch {
             print("Failed to save file: \(error.localizedDescription)")
+        }
+    }
+
+    private func resetCounter() {
+        // Reset the counter value
+        counter = 1
+        
+        // Optionally, reset the entry for today
+        if let todayEntry = entries.first(where: { Calendar.current.isDate($0.date!, inSameDayAs: Date()) }) {
+            todayEntry.value = 1
+            saveContext()
         }
     }
 }
