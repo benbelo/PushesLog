@@ -12,7 +12,9 @@
 		434478842C70FDF40058C143 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434478832C70FDF40058C143 /* Assets.xcassets */; };
 		434478872C70FDF40058C143 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434478862C70FDF40058C143 /* Preview Assets.xcassets */; };
 		434478892C70FDF40058C143 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434478882C70FDF40058C143 /* Persistence.swift */; };
-		4344788C2C70FDF40058C143 /* PushesLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4344788A2C70FDF40058C143 /* PushesLog.xcdatamodeld */; };
+		435FF4752C72A0B600A08643 /* CounterModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 435FF4732C72A0B600A08643 /* CounterModel.xcdatamodeld */; };
+		435FF4842C72A16D00A08643 /* CounterEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FF4822C72A16D00A08643 /* CounterEntry+CoreDataClass.swift */; };
+		435FF4852C72A16D00A08643 /* CounterEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435FF4832C72A16D00A08643 /* CounterEntry+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +24,9 @@
 		434478832C70FDF40058C143 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434478862C70FDF40058C143 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		434478882C70FDF40058C143 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4344788B2C70FDF40058C143 /* PushesLog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PushesLog.xcdatamodel; sourceTree = "<group>"; };
+		435FF4742C72A0B600A08643 /* CounterModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CounterModel.xcdatamodel; sourceTree = "<group>"; };
+		435FF4822C72A16D00A08643 /* CounterEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CounterEntry+CoreDataClass.swift"; path = "PushesLog/CounterEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		435FF4832C72A16D00A08643 /* CounterEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CounterEntry+CoreDataProperties.swift"; path = "PushesLog/CounterEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 		434478732C70FDF20058C143 = {
 			isa = PBXGroup;
 			children = (
+				435FF4822C72A16D00A08643 /* CounterEntry+CoreDataClass.swift */,
+				435FF4832C72A16D00A08643 /* CounterEntry+CoreDataProperties.swift */,
 				4344787E2C70FDF20058C143 /* PushesLog */,
 				4344787D2C70FDF20058C143 /* Products */,
 			);
@@ -59,8 +65,8 @@
 				434478812C70FDF20058C143 /* ContentView.swift */,
 				434478832C70FDF40058C143 /* Assets.xcassets */,
 				434478882C70FDF40058C143 /* Persistence.swift */,
-				4344788A2C70FDF40058C143 /* PushesLog.xcdatamodeld */,
 				434478852C70FDF40058C143 /* Preview Content */,
+				435FF4732C72A0B600A08643 /* CounterModel.xcdatamodeld */,
 			);
 			path = PushesLog;
 			sourceTree = "<group>";
@@ -143,10 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4344788C2C70FDF40058C143 /* PushesLog.xcdatamodeld in Sources */,
 				434478892C70FDF40058C143 /* Persistence.swift in Sources */,
 				434478822C70FDF20058C143 /* ContentView.swift in Sources */,
+				435FF4752C72A0B600A08643 /* CounterModel.xcdatamodeld in Sources */,
 				434478802C70FDF20058C143 /* PushesLogApp.swift in Sources */,
+				435FF4842C72A16D00A08643 /* CounterEntry+CoreDataClass.swift in Sources */,
+				435FF4852C72A16D00A08643 /* CounterEntry+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,13 +362,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4344788A2C70FDF40058C143 /* PushesLog.xcdatamodeld */ = {
+		435FF4732C72A0B600A08643 /* CounterModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4344788B2C70FDF40058C143 /* PushesLog.xcdatamodel */,
+				435FF4742C72A0B600A08643 /* CounterModel.xcdatamodel */,
 			);
-			currentVersion = 4344788B2C70FDF40058C143 /* PushesLog.xcdatamodel */;
-			path = PushesLog.xcdatamodeld;
+			currentVersion = 435FF4742C72A0B600A08643 /* CounterModel.xcdatamodel */;
+			name = CounterModel.xcdatamodeld;
+			path = /Users/benjamin/syncthing/code/swift/PushesLog/PushesLog/PushesLog/CounterModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
